@@ -14,6 +14,15 @@ import {addCSS} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.9/element.js";
 
 addCSS("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.css");
 
+// Menyembunyikan watermark OpenLayers
+const style = document.createElement('style');
+style.innerHTML = `
+  .ol-attribution {
+    display: none !important;
+  }
+`;
+document.head.appendChild(style);
+
 const map = new Map({
   target: 'map',
   layers: [
